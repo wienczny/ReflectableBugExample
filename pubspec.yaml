@@ -1,0 +1,25 @@
+name: reflectable_bug_example
+version: 0.0.1
+description: Reflectable Bug Example.
+dependencies:
+  polymer: "^1.0.0-rc.2"
+  web_components: "^0.12.0"
+  protobuf: "any"
+  reflectable: "^0.3.2"
+transformers:
+- web_components:
+    entry_points:
+    - web/index.html
+- reflectable:
+    entry_points:
+    - web/index.dart
+- test/pub_serve:
+    $include: test/**_test{.*,}.dart
+- $dart2js:
+    minify: false
+    sourceMaps: true
+    verbose: true
+dev_dependencies:
+  test: ^0.12.3
+environment:
+  sdk: ">=1.2.0 <2.0.0"

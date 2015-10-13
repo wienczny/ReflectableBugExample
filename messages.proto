@@ -1,0 +1,4 @@
+package reflectable_bug_example;
+
+message Envelope {
+}
